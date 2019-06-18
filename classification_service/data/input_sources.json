@@ -1,0 +1,187 @@
+{
+  "sources": [
+    {
+      "id": "c8924362434211e9b4869dc96327a82d",
+      "name": "Sentinel-2 L1C Archive",
+      "description": "Entire archive of Sentinel-2 L1C imagery",
+      "access": {
+        "accessType": "public",
+        "ownerId": 50
+      },
+      "sourceType": "S2 L1C Archive",
+      "samplingParams": [
+        "resolution",
+        "windowWidth",
+        "windowHeight",
+        "buffer"
+      ],
+      "defaultUi": {
+        "showRanking": true,
+        "mapLayers": [
+          {
+            "name": "Sentinel-2",
+            "url": "https://services.sentinel-hub.com/ogc/wms/<SH_INSTANCE_ID>?showLogo=false&transparent=true&maxcc=100",
+            "attribution": {
+              "name": "Sentinel Hub",
+              "href": "https://www.sentinel-hub.com"
+            },
+            "presets": [
+              "TRUE_COLOR",
+              "BRIGHT_AREAS",
+              "DARK_AREAS",
+              "INFRARED",
+              "CLOUDS_BCY",
+              "CLOUDS_B11_B3_B2",
+              "CIRRUS",
+              "WATER_TEST",
+              "SNOW_TEST",
+              "NDVI"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ef22ddb8434211e99688c47e596ec61e",
+      "name": "Water Bodies",
+      "description": "Results of water body detection",
+      "access": {
+        "accessType": "public",
+        "ownerId": 50
+      },
+      "sourceType": "Geopedia WB",
+      "geopediaLayer": 2048,
+      "layers": [
+        {
+          "title": "Water-body",
+          "paintAll": false,
+          "classes": [
+            {
+              "color": "#0000FF",
+              "title": "Water"
+            }
+          ]
+        }
+      ],
+      "samplingParams": [
+        "resolution",
+        "windowWidth",
+        "windowHeight",
+        "buffer"
+      ],
+      "defaultUi": {
+        "showRanking": false,
+        "mapLayers": [
+          {
+            "name": "Sentinel-2",
+            "url": "https://services.sentinel-hub.com/ogc/wms/<SH_INSTANCE_ID>?showLogo=false&transparent=true&maxcc=100",
+            "attribution": {
+              "name": "Sentinel Hub",
+              "href": "https://www.sentinel-hub.com"
+            },
+            "presets": [
+              "TRUE_COLOR",
+              "BRIGHT_AREAS",
+              "DARK_AREAS",
+              "INFRARED",
+              "WATER_TEST",
+              "SNOW_TEST",
+              "NDVI"
+            ]
+          },
+          {
+            "name": "Water Bodies",
+            "url": "http://service.geopedia.world/wms/ClassificationApp?layers=ttl2249&format=image/png&transparent=true",
+            "attribution": {
+              "name": "Geopedia",
+              "href": "https://www.geopedia.world"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "03ab81ae434311e987f8fa368eda0d44",
+      "name": "Cloud, shadow and land classification results",
+      "description": "Results of ClassificationApp V0",
+      "access": {
+        "accessType": "private",
+        "ownerId": 50
+      },
+      "sourceType": "Geopedia V0",
+      "geopediaLayer": 1749,
+      "layers": [
+        {
+          "title": "Clouds",
+          "paintAll": false,
+          "classes": [
+            {
+              "color": "#FF7000",
+              "title": "Opaque clouds"
+            },
+            {
+              "color": "#FFB000",
+              "title": "Thick clouds"
+            },
+            {
+              "color": "#FFFF00",
+              "title": "Thin clouds"
+            }]
+        },
+        {
+          "title": "Shadows",
+          "paintAll": false,
+          "classes": [
+            {
+              "color": "#606060",
+              "title": "Shadows"
+            }
+          ]
+        },
+        {
+          "title": "Surface",
+          "paintAll": true,
+          "classes": [
+            {
+              "color": "#008000",
+              "title": "Land"
+            },
+            {
+              "color": "#0000FF",
+              "title": "Water"
+            },
+            {
+              "color": "#00FFFF",
+              "title": "Snow"
+            }
+          ]
+        }
+      ],
+      "defaultUi": {
+        "showRanking": true,
+        "mapLayers": [
+          {
+            "name": "Sentinel-2",
+            "url": "https://services.sentinel-hub.com/ogc/wms/<SH_INSTANCE_ID>?showLogo=false&transparent=true&maxcc=100",
+            "attribution": {
+              "name": "Sentinel Hub",
+              "href": "https://www.sentinel-hub.com"
+            },
+            "presets": [
+              "TRUE_COLOR",
+              "BRIGHT_AREAS",
+              "DARK_AREAS",
+              "INFRARED",
+              "CLOUDS_BCY",
+              "CLOUDS_B11_B3_B2",
+              "CIRRUS",
+              "WATER_TEST",
+              "SNOW_TEST",
+              "NDVI"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

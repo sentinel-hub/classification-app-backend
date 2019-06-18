@@ -1,0 +1,16 @@
+requests
+Flask
+flask-restplus
+flask-jwt-extended
+werkzeug
+numpy
+sentinelhub
+flask-cors
+shapely
+eo-learn-geometry
+attrs
+marshmallow<3.0.0
+marshmallow-jsonschema
+inflection
+python-dateutil
+Pillow

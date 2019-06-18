@@ -1,0 +1,29 @@
+[[source]]
+name = "pypi"
+verify_ssl = true
+url = "https://pypi.org/simple"
+
+[requires]
+python_version = "3.6"
+
+[packages]
+requests = "*"
+sentinelhub = "*"
+eo-learn-geometry = "*"
+attrs = "*"
+inflection = "*"
+python-dateutil = "*"
+numpy = "*"
+Flask = "*"
+Werkzeug = "*"
+Flask-Cors = "*"
+Shapely = "*"
+Pillow = "*"
+flask-restplus = "*"
+marshmallow = "<3.0.0"
+marshmallow-jsonschema = "*"
+Flask-JWT-Extended = "*"
+
+[dev-packages]
+zappa = "*"
+pylint = "*"
